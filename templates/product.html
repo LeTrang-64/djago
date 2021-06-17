@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="mt-5 pt-4">
+  <div class="container dark-grey-text mt-5">
+
+    <!--Grid row-->
+    <div class="row wow fadeIn">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <img src="{{ object.image.url }}" class="img-fluid" alt="">
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <!--Content-->
+        <div class="p-4">
+
+          <div class="mb-3">
+            <a href="">
+              <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+            </a>
+          </div>
+
+          <p class="lead">
+            {% if object.discount_price %}
+            <span class="mr-1">
+              <del>${{ object.price }}</del>
+            </span>
+            <span>${{ object.discount_price }}</span>
+            {% else %}
+            <span>${{ object.price }}</span>
+            {% endif %}
+          </p>
+
+          <p class="lead font-weight-bold">Description</p>
+
+          <p>{{ object.description }}</p>
+
+          {% comment %} <form class="d-flex justify-content-left">
+            <!-- Default input -->
+            <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+            <button class="btn btn-primary btn-md my-0 p" type="submit">
+              Add to cart
+              <i class="fas fa-shopping-cart ml-1"></i>
+            </button>
+
+          </form> {% endcomment %}
+          <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
+            Add to cart
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </a>
+          <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
+            Remove from cart
+          </a>
+
+        </div>
+        <!--Content-->
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <hr>
+
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center wow fadeIn">
+
+      <!--Grid column-->
+      <h4 class="my-4 h4">SHEIN FASHION</h4>
+      <div class="row wow fadeIn">
+
+
+
+        <p>SHEIN là một trong những nhà bán lẻ thời trang trực tuyến lớn nhất thế giới cung cấp thời trang phong cách
+          mới nhất và dẫn đầu xu hướng.</p>
+        <br />
+        <p>Chúng tôi cố gắng để đổi mới, kích động, và cung cấp cho khách hàng của chúng tôi với một loạt các cái nhìn
+          nóng nhất với mức giá hot nhất.</p>
+        <br />
+        <p>Tại SheIn, thời trang là niềm đam mê của chúng tôi! Mua ngay Váy đầm , đỉnh , đáy , Đồ trang sức & nhiều hơn
+          nữa!</p>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <div class="row wow fadeIn">
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4">
+
+        <img
+          src="https://img.ltwebstatic.com/images3_pi/2020/12/25/16088650164dc36035d8eff01036fd4d62065e2656_thumbnail_405x552.webp"
+          class="img-fluid" alt="">
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <img
+          src="https://img.ltwebstatic.com/images3_pi/2020/12/25/16088647651cb66f75356a81e8cdc8bb655791bc3a_thumbnail_405x552.webp"
+          class="img-fluid" alt="">
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <img
+          src="https://img.ltwebstatic.com/images3_pi/2020/12/29/1609233644319c07d3f8dd107ada7d0730e0d98d78_thumbnail_405x552.webp"
+          class="img-fluid" alt="">
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+</main>
+
+{% endblock content %}
